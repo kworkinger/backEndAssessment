@@ -20,13 +20,13 @@ function registerSubmitHandler(e) {
     let bodyObj = {
             firstName: firstName.value,
             lastName: lastName.value,
-            email: email
+            email: email.value
         }
     register(bodyObj)
         
     firstName.value = ''
     lastName.value = ''
-    email = ''
+    email.value = ''
 }
 
 function createUserCard(data) {

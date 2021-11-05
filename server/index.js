@@ -39,10 +39,12 @@ res.status(200).send(randomFortune)
 })
 
 const users = []
+const globalId = 1
 app.post("/api/register", (req, res) => {
   console.log("Registering User")
   const {firstName, lastName, email} = req.body
   let newUser = {
+    id: globalId,
     firstName,
     lastName,
     email
@@ -51,6 +53,17 @@ app.post("/api/register", (req, res) => {
   console.log(newUser)
   console.log(users)
   res.status(200).send(newUser)
+  globalId++
 })
 
 app.listen(4000, () => console.log("Server running on 4000"));
+
+app.put("/api/register/:id", (req, res) => {
+  console.log("Changing User Info")
+  let {id} = request.params
+  let index = users.findIndex(elem => elem.id === +id)
+  const {firstName, lastName, email} = req.body
+  
+  
+  
+})
