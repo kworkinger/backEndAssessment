@@ -48,8 +48,9 @@ app.post("/api/register", (req, res) => {
     email
   }
   users.push(newUser)
+  console.log(newUser)
   console.log(users)
-  res.status(200).send("Information secured, thank you for joining!")
+  res.status(200).send(newUser)
 })
 
 app.listen(4000, () => console.log("Server running on 4000"));
