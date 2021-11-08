@@ -21,8 +21,17 @@
       <br> <br>
       
       <input type="submit" id="submit">
+      <button id="update">Update</button>
+      <button id="delete">Delete</button>
       <section id="user-info"></section>
     </form>
+    
+    <h3>Make a List of Goals:</h3>
+    <div id="goals">
+      <input type="text" id="goal" placeholder="*meditate daily">
+      <button id="add-goal">Add Goal</button>
+      <ul id="goalList"></ul>
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       document.getElementById("complimentButton").onclick = function () {
@@ -40,11 +49,14 @@
             })
       }
       // document.getElementById("firstName", "lastName", "email").onsubmit = function () {
-      //   axios.get("http://localhost:4000/api/submit")
+      //   axios.post("http://localhost:4000/api/submit", {})
       //       .then(function (response) {
       //         const data = response.data
       //         alert(data)
       //       })
+      // }
+      // document.getElementById("add-goal").onsubmit = function () {
+      //   axios.post("http://localhost:4000/api/goals", {} )
       // }
     </script>
     <script src="main.js"></script>
